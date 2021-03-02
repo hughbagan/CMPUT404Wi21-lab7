@@ -1,7 +1,79 @@
 CMPUT 404 Wi21
 Lab 7
 Hugh Bagan
+https://github.com/hughbagan/CMPUT404Wi21-lab7
 
 
 Question 1
 ----------
+Django provides an admin interface and more overhead in general than Flask.
+However, that can come in handy and Flask's minimalism may not scale the best.
+
+
+Question 2
+----------
+REpresentational State Transfer. 
+When something is "RESTful", it means it satisfies the 6 guiding constraints:
+1. Client-server (user interface is separated from data storage)
+2. Stateless (each request contains all info necessary info to understand it; 
+    it doesn't need any context from the server; session state is kept on the
+    client)
+3. Cacheable (label response data as cacheable or non-cacheable)
+4. Uniform interface (generality; identification of resources, manipulation of
+    resources through representations, self-descriptive messages, and state
+    controlled exclusively through hypermedia (ie. endpoints))
+5. Layered system (heirarchical layers of components, which can't "see" beyond
+    immediate layer being interacted with)
+6. Code on demand (client functionality can be extended by applets, scripts.
+    Somewhat optional.)
+
+
+Question 3
+----------
+CRUD:
+Create
+Read
+Update
+Delete
+REST is essentially CRUD for HTTP resources. 
+It's natural to make this mapping:
+Create  - POST*
+Read    - GET
+Update  - PUT*
+Delete  - DELETE
+Technically, PUT can create new resources and POST can do a lot of things.
+But generally under REST we only want each HTTP code on an endpoint to do just
+one function (no side effects).
+
+
+Question 4
+----------
+1XX - information, status messages
+2XX - Success codes
+3XX - Redirection
+4XX - User/client error
+5XX - Server error
+
+
+Question 5
+----------
+XSS - cross site scripting attack
+Scripts injected into webapps & websites to run on an end user.
+Vulnerabilities in webapps are exploited.
+eg. user input and input sanitizing. Attacker puts a <script> into a query 
+string or embedded in an HTML fragment as part of a form.
+
+
+Question 6
+----------
+CORS: Cross-Origin Resource Sharing
+Allows browser to permit loading resources from foreign origins.
+"Preflight" headers are used to request and consent the transaction with 
+the foreign origin.
+Use it when you have multiple "origins" (ie. sites) of resources that need to 
+be shared.
+Used in XMLHttpRequest, Fetch APIs, Web fonts, WebGL textures, canvas drawn 
+images/video, CSS shapes from images
+
+
+
